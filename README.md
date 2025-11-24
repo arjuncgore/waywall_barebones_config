@@ -18,4 +18,6 @@ https://qmaxxen.github.io/overlay-gen/more-options/
 ## Ninbot
 Make sure your ninjabrain bot (and paceman if you need it) are in the following directory `~/mcsr/`, or change the path at the start of `init.lua`.
 
-Here's how I made it if you're interested https://youtu.be/TZ__BxfP0Zo
+## How I made it
+Here's a timelapse video of me creating the configuration if you're interested
+https://youtu.be/TZ__BxfP0Zo
