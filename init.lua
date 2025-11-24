@@ -21,7 +21,8 @@ local remapped_kb = {
 local home_path = os.getenv("HOME") .. "/"
 local pacem_path = home_path .. "mcsr/paceman-tracker-0.7.0.jar"
 local nb_path = home_path .. "mcsr/Ninjabrain-Bot-1.5.1.jar"
-local overlay_path = home_path .. "mcsr/measuring_overlay.png"
+-- local overlay_path = home_path .. "mcsr/measuring_overlay.png"
+local overlay_path = home_path .. ".config/waywall/measuring_overlay.png"
 
 
 -- ==== HELPERS ====
