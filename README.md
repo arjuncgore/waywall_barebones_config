@@ -10,6 +10,7 @@ IMPORTANT: If you already have a config set up, you will need to move it either 
 ```bash
 mv ~/.config/waywall ~/.config/waywall.bkp
 ```
+If you have a 1440p monitor, add this argument to the clone command `-b 1440`
 
 ## Overlay
 This config requires a 30 pixel wide measuring overlay like the one provided, or you can generate your own with this link, setting the overlay width to 30.
