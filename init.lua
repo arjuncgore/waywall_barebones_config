@@ -57,22 +57,22 @@ end
 local mirrors = {
     thin_e = make_mirror({
         src = { x = 0, y = 37, w = 85, h = 9 },
-        dst = { x = 1130, y = 618, w = 4 * 85, h = 4 * 9 },
+        dst = { x = 1450, y = 747, w = 4 * 85 * 1.5, h = 4 * 9 * 1.5 },
     }),
 
     tall_e = make_mirror({
         src = { x = 0, y = 37, w = 85, h = 9 },
-        dst = { x = 1130, y = 618, w = 4 * 85, h = 4 * 9 },
+        dst = { x = 1450, y = 747, w = 4 * 85 * 1.5, h = 4 * 9 * 1.5 },
     }),
 
     tall_pie = make_mirror({
         src = { x = 0, y = 15958, w = 340, h = 426 },
-        dst = { x = 1130, y = 654, w = 340, h = 426 },
+        dst = { x = 1450, y = 801, w = 340 * 1.5, h = 426 * 1.5 },
     }),
 
     eye_measure = make_mirror({
         src = { x = 155, y = 7902, w = 30, h = 580 },
-        dst = { x = 0, y = 370, w = 790, h = 340 },
+        dst = { x = 0, y = 493, w = 1110, h = 624 },
     }),
 }
 
@@ -91,7 +91,7 @@ end
 
 local images = {
     measuring_overlay = make_image(overlay_path, {
-        dst = { x = 0, y = 370, w = 790, h = 340 },
+        dst = { x = 0, y = 493, w = 1110, h = 624 },
     }),
 }
 
@@ -137,9 +137,9 @@ local make_res = function(width, height, enable, disable)
 end
 
 local resolutions = {
-    thin = make_res(340, 1080, thin_enable, res_disable),
+    thin = make_res(340, 1440, thin_enable, res_disable),
     tall = make_res(340, 16384, tall_enable, res_disable),
-    wide = make_res(1920, 340, wide_enable, res_disable),
+    wide = make_res(2560, 400, wide_enable, res_disable),
 }
 
 -- ==== CONFIG ====
