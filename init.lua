@@ -16,6 +16,7 @@ local remapped_kb = {
     -- ["Q"] = "O"
 }
 
+-- ==== SENSITIVITIES ====
 local normal_sens = 1
 local tall_sens = 0.1
 
