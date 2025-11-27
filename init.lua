@@ -16,6 +16,9 @@ local remapped_kb = {
     -- ["Q"] = "O"
 }
 
+local normal_sens = 1
+local tall_sens = 0.1
+
 
 -- ==== PATHS ====
 local home_path = os.getenv("HOME") .. "/"
@@ -107,17 +110,21 @@ end
 
 local thin_enable = function()
     show_mirrors(true, false, false)
+    waywall.set_sensitivity(normal_sens)
 end
 
 local tall_enable = function()
     show_mirrors(false, true, false)
+    waywall.set_sensitivity(tall_sens)
 end
 local wide_enable = function()
     show_mirrors(false, false, true)
+    waywall.set_sensitivity(normal_sens)
 end
 
 local res_disable = function()
     show_mirrors(false, false, false)
+    waywall.set_sensitivity(normal_sens)
 end
 
 
@@ -142,6 +149,7 @@ local resolutions = {
     wide = make_res(1920, 340, wide_enable, res_disable),
 }
 
+
 -- ==== CONFIG ====
 local config = {
     input = {
@@ -149,7 +157,7 @@ local config = {
         repeat_rate = 40,
         repeat_delay = 300,
         remaps = remapped_kb,
-        sensitivity = 1.0,
+        sensitivity = normal_sens,
         confine_pointer = false,
     },
     theme = {
@@ -160,7 +168,7 @@ local config = {
 }
 
 config.actions = {
-
+    
     [thin] = resolutions.thin,
     [tall] = resolutions.tall,
     [wide] = resolutions.wide,
