@@ -17,6 +17,10 @@ local remapped_kb = {
 }
 
 
+-- ==== SENSITIVITIES ====
+local normal_sens = 1
+local tall_sens = 0.1
+
 -- ==== PATHS ====
 local home_path = os.getenv("HOME") .. "/"
 local pacem_path = home_path .. "mcsr/paceman-tracker-0.7.0.jar"
@@ -107,17 +111,21 @@ end
 
 local thin_enable = function()
     show_mirrors(true, false, false)
+    waywall.set_sensitivity(normal_sens)
 end
 
 local tall_enable = function()
     show_mirrors(false, true, false)
+    waywall.set_sensitivity(tall_sens)
 end
 local wide_enable = function()
     show_mirrors(false, false, true)
+    waywall.set_sensitivity(normal_sens)
 end
 
 local res_disable = function()
     show_mirrors(false, false, false)
+    waywall.set_sensitivity(normal_sens)
 end
 
 
@@ -149,7 +157,7 @@ local config = {
         repeat_rate = 40,
         repeat_delay = 300,
         remaps = remapped_kb,
-        sensitivity = 1.0,
+        sensitivity = normal_sens,
         confine_pointer = false,
     },
     theme = {
