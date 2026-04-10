@@ -31,7 +31,7 @@ local overlay_path = home_path .. ".config/waywall/measuring_overlay.png"
 
 -- ==== HELPERS ====
 local is_ninb_running = function()
-    local handle = io.popen("pgrep -f 'Ninjabrain.*jar'")
+    local handle = io.popen("pgrep -f '[N]injabrain-Bot.*\\.jar'")
     local result = handle:read("*l")
     handle:close()
     return result ~= nil
